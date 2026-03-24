@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sameer World</title>
+
+<style>
+body {
+  margin:0;
+  font-family: Arial;
+  text-align:center;
+  color:white;
+  background:black;
+}
+
+#welcome {
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-size:30px;
+  cursor:pointer;
+  animation: fade 2s infinite alternate;
+}
+
+@keyframes fade {
+  from {opacity:0.5;}
+  to {opacity:1;}
+}
+
+#main, #hidden {
+  display:none;
+  padding:20px;
+}
+
+.box {
+  background:lightgreen;
+  color:black;
+  padding:15px;
+  margin-top:20px;
+  cursor:pointer;
+  animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+  from {box-shadow:0 0 5px lightgreen;}
+  to {box-shadow:0 0 20px lightgreen;}
+}
+
+.blink {
+  font-size:40px;
+  color:darkgreen;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  50% {opacity:0;}
+}
+
+.section {
+  margin-top:20px;
+  text-align:left;
+}
+
+.topic {
+  color:pink;
+}
+
+.final-line {
+  margin-top:30px;
+  font-style:italic;
+  text-align:center;
+}
+
+.photos img {
+  width:150px;
+  margin:10px;
+  border-radius:10px;
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- Welcome -->
+<div id="welcome" onclick="openMain()">
+  Welcome to my black world
+</div>
+
+<!-- Main -->
+<div id="main">
+  <h2>Name: Sameer Kumar</h2>
+  <p>Age: 17 years</p>
+  <p>I study in class 12th (Science)</p>
+  <p>I live in Kurthoul Dariyapur</p>
+  <p>My home is in Fatuha (Parsa)</p>
+  <p>My hobby: Learning new things</p>
+
+  <div class="box" onclick="askPassword()">
+    More information about Sameer
+  </div>
+</div>
+
+<!-- Hidden -->
+<div id="hidden">
+  <div class="blink">SAMEER</div>
+
+  <!-- Detail -->
+  <div class="section">
+    <h3 class="topic">Detail</h3>
+    <p>Name: Sameer</p>
+    <p>Date of Birth: 02/07/2008</p>
+    <p>Class: 12th</p>
+
+    <p>
+      Instagram: 
+      <a href="https://instagram.com/strom_chaser_0207" target="_blank"
+      style="color:#00ffff; text-decoration:none; font-weight:bold;">
+      📸 @strom_chaser_0207
+      </a>
+    </p>
+
+    <p>
+      WhatsApp: 
+      <a href="https://wa.me/91XXXXXXXXXX" target="_blank"
+      style="color:#25D366; text-decoration:none; font-weight:bold;">
+      💬 Chat with me
+      </a>
+    </p>
+
+    <p>Free Fire UID: ______</p>
+  </div>
+
+  <!-- Dream -->
+  <div class="section">
+    <h3 class="topic">My Dream</h3>
+    <p>My dream is to earn money by serving in the defense sector. I want to prepare for NDA and join the defense in any possible way. If NDA doesn't work, I will try other paths like joining the Air Force.</p>
+  </div>
+
+  <!-- Goal -->
+  <div class="section">
+    <h3 class="topic">My Goal</h3>
+    <p>My goal is to seriously prepare for NDA after my 12th exams for at least four months, whether I succeed or not.</p>
+  </div>
+
+  <!-- Routine -->
+  <div class="section">
+    <h3 class="topic">My Daily Routine</h3>
+    <p>I wake up at 5:30 AM, go to coaching, then school or clinic, return home around 8–9 PM, play games, eat, and sleep.</p>
+  </div>
+
+  <!-- Feeling -->
+  <div class="section">
+    <h3 class="topic">My Feeling</h3>
+    <p>I often feel lonely even when I am surrounded by people. I want someone to talk to who replies to my messages.</p>
+  </div>
+
+  <!-- Photos -->
+  <div class="section">
+    <h3 class="topic">My Photos</h3>
+    <div class="photos">
+      <img src="photo1.jpg">
+      <img src="photo2.jpg">
+      <img src="photo3.jpg">
+    </div>
+  </div>
+
+  <!-- Final Line -->
+  <div class="final-line">
+    <p>I don't have any special skills and I'm not the best at anything. I'm just a normal boy.</p>
+  </div>
+
+</div>
+
+<script>
+function openMain() {
+  document.getElementById("welcome").style.display="none";
+  document.getElementById("main").style.display="block";
+}
+
+function askPassword() {
+  let pass = prompt("Enter Password:");
+  if(pass === "yeuhrvhdhdh"){
+    document.getElementById("hidden").style.display="block";
+  } else {
+    alert("Wrong Password!");
+  }
+}
+</script>
+
+</body>
+</html>
