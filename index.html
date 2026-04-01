@@ -10,6 +10,9 @@ body {
   text-align:center;
   color:white;
   background:black;
+  display:flex;
+  flex-direction:column;
+  min-height:100vh;
 }
 
 #welcome {
@@ -65,10 +68,15 @@ body {
   color:pink;
 }
 
-.final-line {
-  margin-top:30px;
-  font-style:italic;
-  text-align:center;
+/* 🔥 Final line style */
+.footer-text {
+  color:#4A90E2;
+  font-weight:bold;
+  text-shadow:0 0 5px #4A90E2,
+               0 0 10px #4A90E2,
+               0 0 20px #000;
+  margin-top:auto;
+  padding:10px;
 }
 
 .photos img {
@@ -134,54 +142,76 @@ body {
   <!-- Dream -->
   <div class="section">
     <h3 class="topic">My Dream</h3>
-    <p>My dream is to earn money by serving in the defense sector. I want to prepare for NDA and join the defense in any possible way. If NDA doesn't work, I will try other paths like joining the Air Force.</p>
+    <p>My dream is to earn money by serving in the defense sector...</p>
   </div>
 
   <!-- Goal -->
   <div class="section">
     <h3 class="topic">My Goal</h3>
-    <p>My goal is to seriously prepare for NDA after my 12th exams for at least four months, whether I succeed or not.</p>
+    <p>My goal is to seriously prepare for NDA...</p>
   </div>
 
   <!-- Routine -->
   <div class="section">
     <h3 class="topic">My Daily Routine</h3>
-    <p>I wake up at 5:30 AM, go to coaching, then school or clinic, return home around 8–9 PM, play games, eat, and sleep.</p>
+    <p>I wake up at 5:30 AM...</p>
   </div>
 
   <!-- Feeling -->
   <div class="section">
     <h3 class="topic">My Feeling</h3>
-    <p>I often feel lonely even when I am surrounded by people. I want someone to talk to who replies to my messages.</p>
+    <p>I often feel lonely even when I am surrounded by people...</p>
   </div>
 
-  <!-- Photos -->
+  <!-- 🔒 Photos with Password -->
   <div class="section">
     <h3 class="topic">My Photos</h3>
-    <div class="photos">
+
+    <div class="box" onclick="openPhotos()">
+      Click to view my photos 🔒
+    </div>
+
+    <div id="photoSection" style="display:none;" class="photos">
       <img src="photo1.jpg">
       <img src="photo2.jpg">
       <img src="photo3.jpg">
     </div>
   </div>
 
-  <!-- Final Line -->
-  <div class="final-line">
-    <p>I don't have any special skills and I'm not the best at anything. I'm just a normal boy.</p>
-  </div>
+</div>
 
+<!-- 🔥 Final Line -->
+<div class="footer-text">
+I don't have any special skills and I'm not the best at anything. I'm just a normal boy.
 </div>
 
 <script>
 function openMain() {
-  document.getElementById("welcome").style.display="none";
-  document.getElementById("main").style.display="block";
+  let pass = prompt("Enter Password:");
+  
+  if(pass === "2yur8rgehueu"){
+    document.getElementById("welcome").style.display="none";
+    document.getElementById("main").style.display="block";
+  } else {
+    alert("Wrong Password!");
+  }
 }
 
 function askPassword() {
   let pass = prompt("Enter Password:");
-  if(pass === "yeuhrvhdhdh"){
+  
+  if(pass === "27yrhrieh2"){
     document.getElementById("hidden").style.display="block";
+  } else {
+    alert("Wrong Password!");
+  }
+}
+
+function openPhotos() {
+  let pass = prompt("Enter Photo Password:");
+
+  if(pass === "photo123"){
+    document.getElementById("photoSection").style.display="block";
   } else {
     alert("Wrong Password!");
   }
@@ -189,4 +219,4 @@ function askPassword() {
 </script>
 
 </body>
-</html>
+  </html>
